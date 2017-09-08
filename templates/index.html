@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+            <h1>Counter:</h1>
+            <h1>{{sessionVal}}</h1>
+
+    </div>
+    <form method='POST' action="/">
+        <input type="hidden" name="action" value="reset">
+        <input type="submit" value="Reset Counter">
+    </form>
+    <form method='POST' action="/">
+        <input type="hidden" name="action" value="add2">
+        <input type="submit" value="Add 2">
+    </form>
+</body>
+
+</html>
